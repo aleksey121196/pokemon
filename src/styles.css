@@ -1,1 +1,168 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css (or any other CSS file in your project) */
+
+/* Style the navbar */
+.navbar {
+    background-color: #333; /* Set background color for navbar */
+    padding: 10px; /* Add padding to navbar */
+  }
+  
+  /* Style the ul element inside navbar */
+  .navbar ul {
+    list-style-type: none; /* Remove default list style */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the li elements inside navbar */
+  .navbar li {
+    display: inline; /* Display li elements horizontally */
+    margin-right: 10px; /* Add space between list items */
+  }
+  
+  /* Style the anchor (a) elements inside navbar */
+  .navbar li a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Add padding to make clickable area larger */
+    color: #fff; /* Set text color */
+    background-color: transparent; /* Set background color to transparent */
+    border: 1px solid #fff; /* Add border for button-like appearance */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth color change */
+  }
+  
+  /* Style active router link inside navbar */
+  .navbar li a.router-link-active {
+    background-color: #0056b3; /* Change background color for active link */
+  }
+  
+  /* Style router link button when hovered */
+  .navbar li a:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+  
+  /* Style router link button when clicked */
+  .glow {
+    box-shadow: 0 0 10px 2px #fff; /* Apply box-shadow effect when button is clicked */
+  }
+  
+
+/*home componnent*/
+ /* styles.css */
+
+ .pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+}
+
+.pokemon-item {
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #101011;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navigation-buttons button:hover {
+  background-color: #0056b3;
+}
+
+a.details-link {
+  color: #007bff; /* Set the text color to blue */
+  text-decoration: none; /* Remove the default underline */
+  font-weight: bold; /* Make the text bold */
+}
+
+a.details-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+  
+
+
+  /* form */
+
+/* Add the following styles to your existing CSS */
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.phone-input-group {
+  display: flex;
+}
+
+#phonePrefix {
+  width: 20%; /* Adjust width as needed */
+  margin-right: 5px; /* Add margin between prefix and phone number */
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+ 
+}
+
+.success-message {
+  color: green; /* Change color to make it visible */
+  font-weight: bold;
+}

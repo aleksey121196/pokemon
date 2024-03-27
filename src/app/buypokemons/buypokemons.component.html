@@ -1,0 +1,48 @@
+<form #buyForm="ngForm" (ngSubmit)="onSubmit()"> <!-- Angular form with template reference variable 'buyForm' and submission event bound to onSubmit() method -->
+    <div>
+        <label for="fullName">Full Name</label> <!-- Label for full name input -->
+        <input type="text" id="fullName" name="fullName" ngModel required> <!-- Input field for full name with ngModel directive for two-way data binding and 'required' attribute for validation -->
+        <div *ngIf="buyForm.controls['fullName'].invalid && (buyForm.controls['fullName'].dirty || buyForm.controls['fullName'].touched)" class="error-message"> <!-- Error message displayed if full name is invalid and either dirty or touched -->
+            Full name is required.
+        </div>
+    </div>
+   
+    <!-- Similar sections for email, phone prefix, phone number, and credit card inputs -->
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" ngModel required>
+        <div *ngIf="buyForm.controls['email'].invalid && (buyForm.controls['email'].dirty || buyForm.controls['email'].touched)" class="error-message">
+            Please enter a valid email address.
+        </div>
+    </div>
+    
+    <div>
+        <label for="phonePrefix">Phone Prefix</label>
+        <input type="text" id="phonePrefix" name="phonePrefix" ngModel required>
+        <div *ngIf="buyForm.controls['phonePrefix'].invalid && (buyForm.controls['phonePrefix'].dirty || buyForm.controls['phonePrefix'].touched)" class="error-message">
+            Phone prefix is required.
+        </div>
+    </div>
+    
+    <div>
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" ngModel required>
+        <div *ngIf="buyForm.controls['phoneNumber'].invalid && (buyForm.controls['phoneNumber'].dirty || buyForm.controls['phoneNumber'].touched)" class="error-message">
+            Phone number is required.
+        </div>
+    </div>
+   
+    <div>
+        <label for="creditCard">Credit Card</label>
+        <input type="text" id="creditCard" name="creditCard" ngModel required>
+        <div *ngIf="buyForm.controls['creditCard'].invalid && (buyForm.controls['creditCard'].dirty || buyForm.controls['creditCard'].touched)" class="error-message">
+            Credit card number is required.
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!buyForm.valid">Submit</button> <!-- Submit button with disabled attribute bound to form validity -->
+    
+    <samp *ngIf="onSubmit" class="success-message"> <!-- Success message displayed if onSubmit is true -->
+        {{successMessage }}
+    </samp>
+</form>

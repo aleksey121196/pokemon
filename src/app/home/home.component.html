@@ -1,0 +1,23 @@
+<div class="pokemon-list">
+  <div *ngFor="let pokemon of pokemons" class="pokemon-item">
+    <div class="pokemon-container">
+      <img [src]="'https://img.pokemondb.net/artwork/large/' + pokemon.name.toLowerCase() + '.jpg'" alt="{{ pokemon.name }}" class="pokemon-image">
+      <p>{{ pokemon.name }}</p>
+      <button (click)="fetchPokemonDetails(pokemon.name)" class="details-button">Details</button> <!-- Button to fetch the details of the Pokemon -->
+    </div>
+  </div>
+  <div *ngIf="selectedPokemonDetails" class="pokemon-details">
+    <h2>{{ selectedPokemonDetails.name }}</h2>
+    <p>Height: {{ selectedPokemonDetails.height }}</p>
+    <p>Weight: {{ selectedPokemonDetails.weight }}</p>
+    <!-- Display other details as needed -->
+  </div>
+</div>
+
+
+
+
+<div class="navigation-buttons">
+  <button (click)="goToPreviousPage()" [disabled]="!previousUrl" class="navigation-button">Previous</button>
+  <button (click)="goToNextPage()" [disabled]="!nextUrl" class="navigation-button">Next</button>
+</div>
